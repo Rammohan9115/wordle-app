@@ -65,18 +65,31 @@ function App() {
   
   return (  
     <div className="App">
-     <nav className=
-     "!bg-gray-50 !hover:scale-150">
-      <h1 className=' text-gray-900 text-2xl pt-2 pb-2 flex items-center justify-center hover:scale-150 hover:p-5 transition'>Wordle</h1>
-      </nav>
-      <AppContext.Provider value={{board,setBoard,currAttempt,setCurrAttempt,onSelectLetter,onDelete,onEnter,correctWord,setDisabledLetters,disabledLetters,setGameOver,gameOver}}>
-        <div className='game'>
-      <Board />
-     {gameOver.gameOver ? <GameOver/> : <Keyboard />}
+    <nav>
+      <h1>Wordle</h1>
+    </nav>
+    <AppContext.Provider
+      value={{
+        board,
+        setBoard,
+        currAttempt,
+        setCurrAttempt,
+        correctWord,
+        onSelectLetter,
+        onDelete,
+        onEnter,
+        setDisabledLetters,
+        disabledLetters,
+        gameOver,
+      }}
+    >
+      <div className="game">
+        <Board />
+        {gameOver.gameOver ? <GameOver /> : <Keyboard />}
       </div>
-      </AppContext.Provider>
-    </div>
-  );
+    </AppContext.Provider>
+  </div>
+);
 }
 
 export default App;

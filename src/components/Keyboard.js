@@ -50,22 +50,22 @@ export default function Keyboard() {
  
 
   return (
-    <div className='flex align-center justify-center ml-30 ' onKeyDown={handleKeyboard}>
-       <div className='line1 flex flex-row'>
+    <div className='flex items-center justify-center' onKeyDown={handleKeyboard}>
+       <div className='line1'>
        {
           keys1.map((key)=>{
           return  <Key keyVal={key} disabled={disabledLetters.includes(key)}/>  
           })
         }
        </div>
-       <div className='line2 flex flex-row'>
+       <div className='line2'>
        {
           keys2.map((key)=>{
           return  <Key keyVal={key} disabled={disabledLetters.includes(key)}/>  
           })
         } 
        </div>
-       <div className='line3 flex flex-row'>
+       <div className='line3'>
         <Key keyVal={"ENTER"} bigKey/>
        {
           keys3.map((key)=>{
