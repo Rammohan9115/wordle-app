@@ -3,7 +3,7 @@
   background-color: #121212;
   width: 100vw;
   height: 100vh;
-  /* display: flex; */
+  /*display: flex; */
   color: white;
 
 }
@@ -131,5 +131,7 @@ nav h1 {
   .App {
     padding-left: 150px;
     padding-right: 150px;
+
   }
+
 }
