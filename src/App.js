@@ -64,31 +64,33 @@ function App() {
   }
   
   return (  
-    <div className="App">
-    <nav>
-      <h1>Wordle</h1>
-    </nav>
-    <AppContext.Provider
-      value={{
-        board,
-        setBoard,
-        currAttempt,
-        setCurrAttempt,
-        correctWord,
-        onSelectLetter,
-        onDelete,
-        onEnter,
-        setDisabledLetters,
-        disabledLetters,
-        gameOver,
-      }}
-    >
-      <div className="game">
-        <Board />
-        {gameOver.gameOver ? <GameOver /> : <Keyboard />}
+    <div className="App flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white ">
+            <nav className='mb-4'> 
+              <h1 className='text-3xl font-bold'>Wordle</h1>
+            </nav>
+            <div className='flex-grow flex flex-col items-center justify-center'>
+            <AppContext.Provider
+              value={{
+                board,
+                setBoard,
+                currAttempt,
+                setCurrAttempt,
+                correctWord,
+                onSelectLetter,
+                onDelete,
+                onEnter,
+                setDisabledLetters,
+                disabledLetters,
+                gameOver,
+              }}
+            >
+              <div className="game">
+                <Board />
+                {gameOver.gameOver ? <GameOver /> : <Keyboard />}
+              </div>
+            </AppContext.Provider>
+            </div>
       </div>
-    </AppContext.Provider>
-  </div>
 );
 }
 

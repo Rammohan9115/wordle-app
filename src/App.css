@@ -5,6 +5,7 @@
   height: 100vh;
   /* display: flex; */
   color: white;
+
 }
 
 body {
@@ -124,4 +125,11 @@ nav h1 {
 }
 #disabled {
   background-color: #3a393c;
+}
+
+@media screen and (max-width: 767px) {
+  .App {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
 }
